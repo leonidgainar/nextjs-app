@@ -16,7 +16,9 @@ const Navbar:FC = () => {
   return (
     <nav className={styles.nav}>
       <div className={styles.logo}>
-        <h1>Next.js App</h1>
+        <Link href="/">
+          <h1> Next.js App </h1>
+        </Link>
       </div>
       <div className={styles.links}>
         {navigation.map(({ id, title, path }) => (
