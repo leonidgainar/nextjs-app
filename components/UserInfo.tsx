@@ -5,12 +5,12 @@ type userTypeProps = {
     user: userType;
 }
 
-const UserInfo:FC<userTypeProps> = ({ user }) => {
+const UserInfo: FC<userTypeProps> = ({ user }) => {
     const { name, email, address } = user || {};
     const { street, suite, city, zipcode } = address || {};
 
     if (!user) {
-        return <div>Information about this user is empty</div>
+        return <div> Empty user </div>
     }
 
     return (

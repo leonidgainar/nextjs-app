@@ -8,7 +8,7 @@ type postsTypeProps = {
     posts: [postType];
 }
 
-export const getStaticProps:GetStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
     const response = await fetch('https://jsonplaceholder.typicode.com/posts');
     const data = await response.json();
 
@@ -25,7 +25,7 @@ export const getStaticProps:GetStaticProps = async () => {
     }
 }
 
-const Posts:FC<postsTypeProps> = ({ posts }) => {
+const Posts: FC<postsTypeProps> = ({ posts }) => {
     return (
         <>
             <Head>

@@ -2,10 +2,10 @@ import { FC } from 'react';
 import { postType } from '../types';
 
 type postTypeProps = {
-    post: postType;
+  post: postType;
 }
 
-const PostInfo:FC<postTypeProps> = ({ post }) => {
+const PostInfo: FC<postTypeProps> = ({ post }) => {
   const { title, body } = post || {};
 
   if (!post) {

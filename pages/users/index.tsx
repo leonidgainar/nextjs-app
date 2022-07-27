@@ -8,7 +8,7 @@ type usersTypeProps = {
     users: [userType];
 }
 
-export const getStaticProps:GetStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
     const response = await fetch('https://jsonplaceholder.typicode.com/users');
     const data = await response.json();
 
@@ -25,7 +25,7 @@ export const getStaticProps:GetStaticProps = async () => {
     }
 }
 
-const Users:FC<usersTypeProps> = ({ users }) => {
+const Users: FC<usersTypeProps> = ({ users }) => {
     return (
         <>
             <Head>

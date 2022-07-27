@@ -10,7 +10,7 @@ type userTypeProps = {
 
 
 // Using SSR
-export const getServerSideProps:GetServerSideProps = async (context) => {
+export const getServerSideProps: GetServerSideProps = async (context) => {
     const { id } = context.params;
     const response = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
     const data = await response.json();
@@ -28,7 +28,7 @@ export const getServerSideProps:GetServerSideProps = async (context) => {
     }
 }
 
-const User:FC<userTypeProps> = ({ user }) => {
+const User: FC<userTypeProps> = ({ user }) => {
     return (
         <>
             <Head>
